@@ -24,13 +24,13 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd webcraft
+          cd webcraft/webcraft
           npm install
 
       - name: Upload Game Files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./webcraft
+          path: ./webcraft/webcraft
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
