@@ -24,13 +24,13 @@ jobs:
 
       - name: Install and Build Webcraft
         run: |
-          npm ci
+          npm install
           npm run build
 
       - name: Upload Build Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./webcraft
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
