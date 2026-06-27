@@ -22,13 +22,12 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install and Build Webcraft
+      - name: Install Dependencies
         run: |
           cd webcraft
           npm install
-          npm run build
 
-      - name: Upload Build Artifacts
+      - name: Upload Game Files
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./webcraft
